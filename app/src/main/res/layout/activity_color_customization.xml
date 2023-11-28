@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_color_customization.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick Notes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/applogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Header with App Name and User Profile Picture -->
+    <!-- Use appropriate views or widgets for displaying the app name and user profile picture -->
+
+    <!-- Color Palette/Selector -->
+    <GridView
+        android:id="@+id/colorPaletteGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerView"
+        android:numColumns="auto_fit"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"/>
+
+    <!-- Preview of the Note with Selected Color -->
+    <RelativeLayout
+        android:id="@+id/notePreviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/colorPaletteGrid"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"> <!-- Default background color -->
+
+        <!-- Add TextViews or EditText for previewing the note content -->
+        <!-- Adjust layout and styles for the note preview -->
+
+    </RelativeLayout>
+
+</RelativeLayout>

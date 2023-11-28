@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_sync_devices.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Header with App Name and User Profile Picture -->
+    <!-- Use appropriate views or widgets for displaying the app name and user profile picture -->
+
+    <!-- User Account Details -->
+    <ImageView
+        android:id="@+id/applogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick Notes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/applogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/userDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Details"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/appName"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Synchronization Options -->
+    <CheckBox
+        android:id="@+id/syncAcrossDevicesCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync Across Devices"
+        android:layout_below="@id/userDetailsTextView"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Information About Syncing Across Devices -->
+    <TextView
+        android:id="@+id/syncInformationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Information about syncing across devices..."
+        android:layout_below="@id/syncAcrossDevicesCheckBox"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_below="@id/syncInformationTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

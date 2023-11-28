@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick Notes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/applogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <!-- Header with App Name and User Profile Picture -->
+    <!-- Use appropriate views or widgets for displaying the app name and user profile picture -->
+
+    <!-- Text Input Area for Note Content -->
+    <EditText
+        android:id="@+id/noteContentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appName"
+        android:hint="Enter your note content here"
+        android:gravity="start"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:maxLines="10"
+        android:scrollbars="vertical"/>
+    <LinearLayout
+        android:id="@+id/formattingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteContentEditText"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/boldButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bold"/>
+
+        <Button
+            android:id="@+id/italicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Italic"/>
+
+        <Button
+            android:id="@+id/bulletPointButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bullet Points"/>
+    </LinearLayout>
+
+
+    <!-- Toolbar with Basic Formatting Options -->
+    <!-- You can use a custom toolbar or a layout with buttons for formatting options -->
+    <!-- Example: Buttons for bold, italic, bullet points -->
+
+    <!-- Buttons for Saving, Deleting, or Organizing Notes -->
+    <!-- Design and place buttons for save, delete, and organizing actions -->
+    <!-- Example: Save Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/bulletPointButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+    <!-- Buttons for Saving, Deleting, or Organizing Notes -->
+    <LinearLayout
+        android:id="@+id/actionButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formattingToolbar"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"/>
+
+        <Button
+            android:id="@+id/organizeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organize"/>
+    </LinearLayout>
+
+    <!-- List of Existing Notes -->
+    <ListView
+        android:id="@+id/notesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/saveButton"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
+
+
